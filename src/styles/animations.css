@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.floating-animation {
+  animation: floating 6s ease-in-out infinite;
+}
+
+.floating-animation-slow {
+  animation: floating 8s ease-in-out infinite;
+}
+
+.floating-animation-reverse {
+  animation: floating 7s ease-in-out infinite reverse;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Tailwind doesn't have these by default */
+.font-spectral {
+  font-family: 'Spectral', serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-caveat {
+  font-family: 'Caveat', cursive;
+}
+
+/* Enhanced lavender colors for dark mode */
+.dark .text-lavender {
+  color: #F0E6FA;
+}
+
+.dark .bg-lavender {
+  background-color: #F0E6FA;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(240, 230, 250, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(240, 230, 250, 0.5);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(26, 35, 126, 0.5);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(26, 35, 126, 0.7);
+}
+
+/* Enhanced hover effects */
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 15px rgba(240, 230, 250, 0.3);
+}
+
+.dark .hover-glow:hover {
+  box-shadow: 0 0 15px rgba(26, 35, 126, 0.3);
+}
